@@ -6,18 +6,15 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class tabulkanavstevyController extends Controller
+class tabulkapacientiController extends Controller
 {
     public function index(){
-        $navstevy = DB::select('select * from navstevy');
-        return view('tabulka_navstevy',['navstevy'=>$navstevy]);
+        $pacienti = DB::select('select * from pacienti');
+        return view('tabulka_pacienti',['pacienti'=>$pacienti]);
         }
-    
-    /* instance pro jen přihlášené */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
-
-    
 }

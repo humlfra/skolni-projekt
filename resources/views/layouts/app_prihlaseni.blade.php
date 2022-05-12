@@ -39,57 +39,21 @@
                 </button>
 
                 <!-- Branding Image -->
+                
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Domů</a></li>
-                    <li><a href="{{ url('/tabulka_pacienti') }}">Pacienti</a></li>
-                    <li><a href="{{ url('/tabulka_navstevy') }}">Návštevy</a></li>
-                    <li><a href="{{ url('/tabulka_pojistovny') }}">Pojišťovny</a></li>
-                    <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Tabulka pacientů<span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/tabulka_pacienti_edit') }}"><i></i>Úprava pacientů</a></li>
-                                <li><a href="{{ url('/tabulka_pacienti_delete') }}"><i></i>Vymazání  pacientů</a></li>
-                                <li><a href="{{ url('/tabulka_pacienti_edit') }}"><i></i>Přidání nového pacienta</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Tabulka návštěv<span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/tabulka_navstevy_edit') }}"><i></i>Úprava návštěv</a></li>
-                                <li><a href="{{ url('/tabulka_navstevy_delete') }}"><i></i>Vymazání  návštev</a></li>
-                                <li><a href="{{ url('/tabulka_navstevy_edit') }}"><i></i>Přidání nové návštěvy</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Tabulka pojišťoven<span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/tabulka_pojistovny_edit') }}"><i></i>Úprava pojišťoven</a></li>
-                                <li><a href="{{ url('/tabulka_pojistovny_delete') }}"><i></i>Vymazání  pojišťoven</a></li>
-                                <li><a href="{{ url('/tabulka_pojistovny_insert') }}"><i></i>Přidání nové pojišťovny</a></li>
-                            </ul>
-                        </li>
-                    
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Přihlášení</a></li>
                         <li><a href="{{ url('/register') }}">Registrace</a></li>
+                        <li><a href="{{ url('/login') }}">Přihlášení</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

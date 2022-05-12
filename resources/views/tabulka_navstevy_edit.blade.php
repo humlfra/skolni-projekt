@@ -9,15 +9,17 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
+                        <th>ID návštěvy</th>
                         <th>Rodné číslo pacienta</th>
                         <th>Popis</th>
-                        <th>Datum a čas</th>
+                        <th>Vytvořeno</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($navstevy as $navsteva)
                     <tr>
-                    <td>{{ $navsteva->rodne_cislo }}</td>
+                    <td>{{ $navsteva->id_navstevy }}</td>
+                    <td>{{ $navsteva->cislo_pacienta }}</td>
                     <td>{{ $navsteva->popis }}</td>
                     <td>{{ $navsteva->created_at }}</td>
                     </tr>

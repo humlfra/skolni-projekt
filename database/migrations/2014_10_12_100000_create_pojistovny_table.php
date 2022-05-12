@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNavstevyTable extends Migration
+class CreatePojistovnyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateNavstevyTable extends Migration
      */
     public function up()
     {
-        Schema::create('navstevy', function (Blueprint $table) {
-            $table->increments('id_navstevy');
-            $table->bigInteger('rodne_cislo');
-            $table->string('popis');
+        Schema::create('pojistovny', function (Blueprint $table) {
+            $table->increments('id_pojistovny');
+            $table->string('nazev_pojistovny');
+            $table->bigInteger('cislo_pojistovny');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateNavstevyTable extends Migration
      */
     public function down()
     {
-        Schema::drop('navstevy');
+        Schema::drop('pojistovny');
     }
 }

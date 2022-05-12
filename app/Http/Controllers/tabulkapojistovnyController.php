@@ -6,11 +6,11 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class tabulkanavstevyController extends Controller
+class tabulkapojistovnyController extends Controller
 {
     public function index(){
-        $navstevy = DB::select('select * from navstevy');
-        return view('tabulka_navstevy',['navstevy'=>$navstevy]);
+        $pojistovny = DB::select('select * from pojistovny');
+        return view('tabulka_pojistovny',['pojistovny'=>$pojistovny]);
         }
     
     /* instance pro jen přihlášené */
@@ -18,6 +18,4 @@ class tabulkanavstevyController extends Controller
     {
         $this->middleware('auth');
     }
-
-    
 }
