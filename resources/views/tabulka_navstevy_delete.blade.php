@@ -9,19 +9,22 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
+                    <th>ID návštěvy</th>
                         <th>Rodné číslo pacienta</th>
-                        <th>Popis</th>
                         <th>Datum navštěvy</th>
                         <th>Čas navštěvy</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($navstevy as $navsteva)
                     <tr>
+                    <tr>
+                    <td>{{ $navsteva->id_navstevy }}</td>
                     <td>{{ $navsteva->rodne_cislo }}</td>
-                    <td>{{ $navsteva->popis }}</td>
                     <td>{{ $navsteva->datum_navstevy }}</td>
                     <td>{{ $navsteva->cas_navstevy }}</td>
+                    <td><a href = 'tabulka_navstevy_delete/{{ $navsteva->id_navstevy }}'>Delete</a></td>
                     </tr>
                     @endforeach
                 </table>

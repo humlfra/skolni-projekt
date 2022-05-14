@@ -4,7 +4,7 @@
 </head>
 <body>
 
-                <form action = "tabulka_pacienti_edit/<?php echo $pacienti[0]->id_pacienta; ?>" method = "post">
+                <form action = "/tabulka_pacienti_edit/<?php echo $pacienti[0]->id_pacienta; ?>" method = "post">
                     <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
                     <table>
                     <tr>

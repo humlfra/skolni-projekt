@@ -26,9 +26,7 @@ class tabulkapacientieditController extends Controller
         DB::update('update pacienti set jmeno = ?,prijmeni=?,rodne_cislo=?,cislo_pojistovny=?,samoplatce=? where id_pacienta = ?',
         [$jmeno,$prijmeni,$rodne_cislo,$cislo_pojistovny,$samoplatce,$id]);
         
-        echo "Record updated successfully.";
-
-        echo 'Click Here to go back.';
+        return redirect('/tabulka_pacienti');
     }
 
     /* instance pro jen přihlášené */

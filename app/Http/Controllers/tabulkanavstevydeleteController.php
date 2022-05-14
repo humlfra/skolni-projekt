@@ -6,19 +6,19 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class tabulkapojistovnydeleteController extends Controller
+class tabulkanavstevydeleteController extends Controller
 {
     public function index(){
-        $pojistovny = DB::select('select * from pojistovny');
-        return view('tabulka_pojistovny_delete',['pojistovny'=>$pojistovny]);
+        $navstevy = DB::select('select * from navstevy');
+        return view('tabulka_navstevy_delete',['navstevy'=>$navstevy]);
         }
     public function show($id) {
-        $pojistovny = DB::select('select * from pojistovny where  = ?',[$id]);
-        return view('tabulka_pojistovny_delete',['pojistovny'=>$pojistovny]);
+        $navstevy = DB::select('select * from navstevy where  = ?',[$id]);
+        return view('tabulka_navstevy_delete',['navstevy'=>$navstevy]);
         }
 
     public function destroy($id) {
-        DB::delete('delete from pojistovny where id_pojistovny = ?',[$id]);
+        DB::delete('delete from navstevy where id_navstevy = ?',[$id]);
         
         return redirect('/tabulka_navstevy');
     }

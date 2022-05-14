@@ -12,21 +12,27 @@ class tabulkanavstevyeditController extends Controller
         $navstevy = DB::select('select * from navstevy');
         return view('tabulka_navstevy_edit',['navstevy'=>$navstevy]);
         }
-
     public function show($id) {
         $navstevy = DB::select('select * from navstevy where id_navstevy = ?',[$id]);
         return view('tabulka_navstevy_update',['navstevy'=>$navstevy]);
-    }
+        }
 
     public function edit(Request $request,$id) {
         $popis = $request->input('popis');
-        /*$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);*/
-        /*DB::table('student')->update($data);*/
-        /* DB::table('student')->whereIn('id', $id)->update($request->all());*/
-        DB::update('update student set first_name = ?,last_name=?,city_name=?,email=? where id = ?',[$first_name,$last_name,$city_name,$email,$id]);
-        echo "Record updated successfully.";
+        $rodne_cislo = $request->input('rodne_cislo');
+        $datum_navstevy = $request->input('datum_navstevy');
+        $cas_navstevy = $request->input('cas_navstevy');
+        DB::update('update navstevy set popis = ?,rodne_cislo=?,datum_navstevy=?, cas_navstevy=? where id_navstevy = ?', [$popis,$rodne_cislo,$datum_navstevy,$cas_navstevy,$id]);
         
-        echo 'Click Here to go back.';
-        }
+        return redirect('/tabulka_navstevy');
+    }
+
+    /* instance pro jen přihlášené */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
 
 }

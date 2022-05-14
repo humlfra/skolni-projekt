@@ -56,7 +56,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/tabulka_pacienti_edit') }}"><i></i>Úprava pacientů</a></li>
                                 <li><a href="{{ url('/tabulka_pacienti_delete') }}"><i></i>Vymazání  pacientů</a></li>
-                                <li><a href="{{ url('/tabulka_pacienti_edit') }}"><i></i>Přidání nového pacienta</a></li>
+                                <li><a href="{{ url('/tabulka_pacienti_insert') }}"><i></i>Přidání nového pacienta</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/tabulka_navstevy_edit') }}"><i></i>Úprava návštěv</a></li>
                                 <li><a href="{{ url('/tabulka_navstevy_delete') }}"><i></i>Vymazání  návštev</a></li>
-                                <li><a href="{{ url('/tabulka_navstevy_edit') }}"><i></i>Přidání nové návštěvy</a></li>
+                                <li><a href="{{ url('/tabulka_navstevy_insert') }}"><i></i>Přidání nové návštěvy</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

@@ -20,8 +20,9 @@ class tabulkapojistovnyeditController extends Controller
       $nazev_pojistovny = $request->input('nazev_pojistovny');
       $cislo_pojistovny = $request->input('cislo_pojistovny');
       DB::update('update pojistovny set nazev_pojistovny = ?, cislo_pojistovny = ? where id_pojistovny = ?',[$nazev_pojistovny,$cislo_pojistovny, $id]);
-      echo "Úspěšně změněno.<br/>";
-      echo '<a href = "/tabulka_pojistovny_edit/">Click Here</a> to go back.';
+      
+      return redirect('/tabulka_pojistovny');
+
    }
 
    /* instance pro jen přihlášené */

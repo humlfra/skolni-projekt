@@ -11,17 +11,19 @@
                     <tr>
                         <th>ID návštěvy</th>
                         <th>Rodné číslo pacienta</th>
-                        <th>Popis</th>
-                        <th>Vytvořeno</th>
+                        <th>Datum navštěvy</th>
+                        <th>Čas navštěvy</th>
+                        <th>Edit</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($navstevy as $navsteva)
                     <tr>
                     <td>{{ $navsteva->id_navstevy }}</td>
-                    <td>{{ $navsteva->cislo_pacienta }}</td>
-                    <td>{{ $navsteva->popis }}</td>
-                    <td>{{ $navsteva->created_at }}</td>
+                    <td>{{ $navsteva->rodne_cislo }}</td>
+                    <td>{{ $navsteva->datum_navstevy }}</td>
+                    <td>{{ $navsteva->cas_navstevy }}</td>
+                    <td><a href = 'tabulka_navstevy_edit/{{ $navsteva->id_navstevy }}'>Edit</a></td>
                     </tr>
                     @endforeach
                 </table>

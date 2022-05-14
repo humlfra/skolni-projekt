@@ -14,8 +14,10 @@ class CreateNavstevyTable extends Migration
     {
         Schema::create('navstevy', function (Blueprint $table) {
             $table->increments('id_navstevy');
-            $table->bigInteger('rodne_cislo');
+            $table->inetegr('rodne_cislo');
             $table->string('popis');
+            $table->date('datum_navstevy');
+            $table->time('cas_navstevy');
             $table->timestamps();
         });
     }
