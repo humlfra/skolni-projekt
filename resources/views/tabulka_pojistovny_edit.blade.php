@@ -9,9 +9,10 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                        <td>ID</td>
-                        <td>Název pojišťovny</td>
-                        <td>Číslo pojišťovny</td>
+                        <th>ID</th>
+                        <th>Název pojišťovny</th>
+                        <th>Číslo pojišťovny</th>
+                        <th>Edit</th>
                         </tr>
                         </thead>
                         <tbody>
